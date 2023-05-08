@@ -1,0 +1,81 @@
+PODS:
+  - agora_rtc_engine (6.1.1):
+    - AgoraIrisRTC_iOS (= 4.1.0-rc.2)
+    - AgoraRtcEngine_iOS (= 4.1.0)
+    - Flutter
+  - AgoraIrisRTC_iOS (4.1.0-rc.2)
+  - AgoraRtcEngine_iOS (4.1.0):
+    - AgoraRtcEngine_iOS/AIAEC (= 4.1.0)
+    - AgoraRtcEngine_iOS/AINS (= 4.1.0)
+    - AgoraRtcEngine_iOS/AudioBeauty (= 4.1.0)
+    - AgoraRtcEngine_iOS/ClearVision (= 4.1.0)
+    - AgoraRtcEngine_iOS/ContentInspect (= 4.1.0)
+    - AgoraRtcEngine_iOS/DRM (= 4.1.0)
+    - AgoraRtcEngine_iOS/ReplayKit (= 4.1.0)
+    - AgoraRtcEngine_iOS/RtcBasic (= 4.1.0)
+    - AgoraRtcEngine_iOS/SpatialAudio (= 4.1.0)
+    - AgoraRtcEngine_iOS/SuperResolution (= 4.1.0)
+    - AgoraRtcEngine_iOS/VirtualBackground (= 4.1.0)
+    - AgoraRtcEngine_iOS/VQA (= 4.1.0)
+  - AgoraRtcEngine_iOS/AIAEC (4.1.0)
+  - AgoraRtcEngine_iOS/AINS (4.1.0)
+  - AgoraRtcEngine_iOS/AudioBeauty (4.1.0)
+  - AgoraRtcEngine_iOS/ClearVision (4.1.0)
+  - AgoraRtcEngine_iOS/ContentInspect (4.1.0)
+  - AgoraRtcEngine_iOS/DRM (4.1.0)
+  - AgoraRtcEngine_iOS/ReplayKit (4.1.0)
+  - AgoraRtcEngine_iOS/RtcBasic (4.1.0)
+  - AgoraRtcEngine_iOS/SpatialAudio (4.1.0)
+  - AgoraRtcEngine_iOS/SuperResolution (4.1.0)
+  - AgoraRtcEngine_iOS/VirtualBackground (4.1.0)
+  - AgoraRtcEngine_iOS/VQA (4.1.0)
+  - Extensions (0.1.0)
+  - Flutter (1.0.0)
+  - iris_method_channel (0.0.1):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - "permission_handler (5.1.0+2)":
+    - Flutter
+
+DEPENDENCIES:
+  - agora_rtc_engine (from `.symlinks/plugins/agora_rtc_engine/ios`)
+  - Extensions (from `./`)
+  - Flutter (from `Flutter`)
+  - iris_method_channel (from `.symlinks/plugins/iris_method_channel/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AgoraIrisRTC_iOS
+    - AgoraRtcEngine_iOS
+
+EXTERNAL SOURCES:
+  agora_rtc_engine:
+    :path: ".symlinks/plugins/agora_rtc_engine/ios"
+  Extensions:
+    :path: "./"
+  Flutter:
+    :path: Flutter
+  iris_method_channel:
+    :path: ".symlinks/plugins/iris_method_channel/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/ios"
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+
+SPEC CHECKSUMS:
+  agora_rtc_engine: 719d838f850311218296e388047017fca1d55575
+  AgoraIrisRTC_iOS: 820fbab2d78d870a1bad4b1a02f950a390c73b48
+  AgoraRtcEngine_iOS: 33f0136ad4196b2a31c8470e6b536fe77fb25f8b
+  Extensions: 110e5fc3ff7048dd63fd8f1a9a988b12c29e9be5
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  iris_method_channel: 0617c689164d8154c020c50f63ca79f92b8a7b9d
+  path_provider_foundation: c68054786f1b4f3343858c1e1d0caaded73f0be9
+  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
+
+PODFILE CHECKSUM: 5044864d6f672356e8382b51526f74c852b7bb13
+
+COCOAPODS: 1.12.1
