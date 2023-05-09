@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
+import 'package:agora_test/const/filter_path.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -163,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
         extension: 'Effect',
         key: 'fuSetup',
         value: jsonEncode({'authdata': authpack.gAuthPackage}));
-
+    //load nhận diện mặt
     final aiFaceProcessorPath =
         await _copyAsset('Resource/model/ai_face_processor.bundle');
     await _rtcEngine.setExtensionProperty(
@@ -172,22 +174,51 @@ class _MyHomePageState extends State<MyHomePage> {
         key: 'fuLoadAIModelFromPackage',
         value: jsonEncode(
             {'data': aiFaceProcessorPath, 'type': aiFaceProcessorType}));
+    //bật filter
+    final filterPath = await _copyAsset(FilterPath.beautyFilter);
 
-    final catSparksPath =
-        await _copyAsset('Resource/items/ItemSticker/CatSparks.bundle');
     await _rtcEngine.setExtensionProperty(
         provider: 'FaceUnity',
         extension: 'Effect',
         key: 'fuCreateItemFromPackage',
-        value: jsonEncode({'data': catSparksPath}));
+        value: jsonEncode({'data': filterPath}));
 
-    // final daisypigPath =
-    //     await _copyAsset('Resource/items/ItemSticker/daisypig.bundle');
-    // await _rtcEngine.setExtensionProperty(
-    //     provider: 'FaceUnity',
-    //     extension: 'Effect',
-    //     key: 'fuCreateItemFromPackage',
-    //     value: jsonEncode({'data': daisypigPath}));
+    await _rtcEngine.setExtensionProperty(
+      provider: 'FaceUnity',
+      extension: 'Effect',
+      key: 'fuItemSetParam',
+      value: jsonEncode(
+        {
+          'obj_handle': FilterPath.beautyFilter,
+          'name': 'filter_name',
+          'value': 'lengsediao11'
+        },
+      ),
+    );
+    await _rtcEngine.setExtensionProperty(
+      provider: 'FaceUnity',
+      extension: 'Effect',
+      key: 'fuItemSetParam',
+      value: jsonEncode(
+        {
+          'obj_handle': FilterPath.beautyFilter,
+          'name': 'filter_level',
+          'value': '1.0'
+        },
+      ),
+    );
+    await _rtcEngine.setExtensionProperty(
+      provider: 'FaceUnity',
+      extension: 'Effect',
+      key: 'fuItemSetParam',
+      value: jsonEncode(
+        {
+          'obj_handle': FilterPath.beautyFilter,
+          'name': 'eye_enlarging',
+          'value': '1.0'
+        },
+      ),
+    );
   }
 
   Future<void> _requestPermissionIfNeed() async {

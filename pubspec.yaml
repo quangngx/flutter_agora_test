@@ -61,16 +61,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - Resource/model/ai_face_processor.bundle
+    - Resource/graphics/face_beautification.bundle
     - Resource/graphics/aitype.bundle
-    - Resource/items/ItemSticker/CatSparks.bundle
-    - Resource/items/ItemSticker/daisypig.bundle
-    - Resource/items/ItemSticker/nihongdeng.bundle
-    - Resource/items/ItemSticker/sdlu.bundle
-    - Resource/items/ARMask/tiger_bai.bundle
-    - Resource/items/Animoji/qgirl.bundle
-    - Resource/items/BigHead/big_head_smiling.bundle
-    - Resource/items/BackgroundSegmentation/boyfriend1.bundle
-    - Resource/items/MagicMirror/facewarp2.bundle
+    - Resource/items/ItemSticker/
+    - Resource/items/ARMask/
+    - Resource/items/Animoji/
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
